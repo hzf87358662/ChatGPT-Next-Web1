@@ -230,7 +230,7 @@ export function SideBar(props: { className?: string }) {
         </div>
       </div>
 
-      <div
+      <div>
         className={styles["sidebar-drag"]}
         onPointerDown={(e) => onDragStart(e as any)}
       >

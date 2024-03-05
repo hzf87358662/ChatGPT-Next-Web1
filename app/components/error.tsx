@@ -42,7 +42,7 @@ export class ErrorBoundary extends React.Component<any, IErrorBoundaryState> {
             <code>{this.state.error?.toString()}</code>
             <code>{this.state.info?.componentStack}</code>
           </pre>
- 
+
             </a>
             <IconButton
               icon={<ResetIcon />}
