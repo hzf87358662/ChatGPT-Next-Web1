@@ -43,6 +43,19 @@ export class ErrorBoundary extends React.Component<any, IErrorBoundaryState> {
             <code>{this.state.info?.componentStack}</code>
           </pre>
 
+          <div style={{ display: "flex", justifyContent: "space-between" }}>
+            <a href={ISSUE_URL} className="report">
+              <IconButton
+                text="Report This Error"
+                bordered
+              />
+            </a>
+            <IconButton
+              icon={<ResetIcon />}
+              text="Clear All Data"
+              onClick={async () => {
+                if (await showConfirm(Locale.Settings.Danger.Reset.Confirm)) {
+                  this.clearAndSaveData();
                 }
               }}
               bordered

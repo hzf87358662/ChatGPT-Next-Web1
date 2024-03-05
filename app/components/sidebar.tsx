@@ -142,7 +142,7 @@ export function SideBar(props: { className?: string }) {
   useHotKey();
 
   return (
-    <div>
+    <div
       className={`${styles.sidebar} ${props.className} ${
         shouldNarrow && styles["narrow-sidebar"]
       }`}
@@ -209,7 +209,11 @@ export function SideBar(props: { className?: string }) {
               }}
             />
           </div>
+          <div className={styles["sidebar-action"]}>
+            </Link>
           </div>
+          <div className={styles["sidebar-action"]}>
+            <a href={REPO_URL} target="_blank" rel="noopener noreferrer">
             </a>
           </div>
         </div>
@@ -230,7 +234,7 @@ export function SideBar(props: { className?: string }) {
         </div>
       </div>
 
-      <div>
+      <div
         className={styles["sidebar-drag"]}
         onPointerDown={(e) => onDragStart(e as any)}
       >
